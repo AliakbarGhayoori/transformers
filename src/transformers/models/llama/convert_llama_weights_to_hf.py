@@ -26,7 +26,7 @@ from transformers import LlamaConfig, LlamaForCausalLM, LlamaTokenizer
 try:
     from transformers import LlamaTokenizerFast
 except ImportError as e:
-    warnings.warn(e)
+    warnings.warn(str(e))
     warnings.warn(
         "The converted tokenizer will be the `slow` tokenizer. To use the fast, update your `tokenizers` library and re-run the tokenizer conversion"
     )
